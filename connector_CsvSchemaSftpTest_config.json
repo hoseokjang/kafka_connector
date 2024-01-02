@@ -1,0 +1,21 @@
+{
+  "name": "JHS-CsvSchemaSftpTest",
+  "config": {
+    "connector.class": "io.confluent.connect.sftp.SftpCsvSourceConnector",
+    "tasks.max": "1",
+    "sftp.host": "192.168.0.95",
+    "sftp.port": "22",
+    "sftp.username": "centos",
+    "sftp.password": "mongta1234!",
+    "kafka.topic": "jhs-test-sftp-topic",
+    "empty.poll.wait.ms": "10000",
+    "input.path": "/home/centos/sample_data",
+    "finished.path": "/home/centos/sample_data",
+    "error.path": "",
+    "cleanup.policy": "NONE",
+    "input.file.pattern": "TEST_D_PROD_FORMAL_LST.csv",
+    "behavior.on.error": "IGNORE",
+    "schema.generation.enabled": "true",
+    "csv.first.row.as.header": "false"
+  }
+}

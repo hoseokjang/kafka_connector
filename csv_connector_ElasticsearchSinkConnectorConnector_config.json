@@ -1,0 +1,19 @@
+{
+  "name": "JHS-CSV-TEST-ElasticsearchSinkConnectorConnector_0",
+  "config": {
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "tasks.max": "1",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "errors.log.enable": "true",
+    "errors.log.include.messages": "true",
+    "topics": "jhs-test-sftp-topic",
+    "connection.url": "http://192.168.0.57:9200",
+    "connection.username": "elastic",
+    "connection.password": "*******",
+    "batch.size": "2000",
+    "linger.ms": "5000",
+    "flush.timeout.ms": "10000",
+    "key.ignore": "true",
+    "schema.ignore": "false"
+  }
+}

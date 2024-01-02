@@ -1,0 +1,25 @@
+{
+  "name": "jhs-test-jdbc-connector",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+    "tasks.max": "1",
+    "config.action.reload": "restart",
+    "errors.retry.delay.max.ms": "6000",
+    "errors.log.enable": "true",
+    "errors.log.include.messages": "true",
+    "connection.url": "jdbc:mysql://18.190.98.10:8306/LF_POC",
+    "connection.user": "mes",
+    "connection.password": "mes1234",
+    "table.whitelist": "D_PROD_FORMAL_LST",
+    "mode": "incrementing",
+    "incrementing.column.name": "seq",
+    "validate.non.null": "false",
+    "poll.interval.ms": "50000",
+    "batch.max.rows": "1000",
+    "topic.prefix": "jhs-test-",
+    "db.timezone": "Asia/Seoul",
+    "topic.creation.default.partitions": "3",
+    "auto.register.schemas": "true",
+    "topic.creation.default.replication.factor": "3"
+  }
+}
